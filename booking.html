@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rezerwacja Stolika</title>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Formularz Rezerwacji Stolika</h1>
+    </header>
+    <nav>
+        <a href="index.html">Powrót do Strony Głównej</a> | 
+        <a href="confirmation.html">Przejdź do Potwierdzenia</a>
+    </nav>
+    
+    <form id="bookingForm">
+        <label for="name">Imię i Nazwisko:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Numer Telefonu:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="adults">Liczba Dorosłych:</label>
+        <input type="number" id="adults" name="adults" min="1" required><br><br>
+
+        <label for="children">Liczba Dzieci:</label>
+        <input type="number" id="children" name="children" min="0" required><br><br>
+
+        <label for="specialRequests">Specjalne Życzenia:</label>
+        <textarea id="specialRequests" name="specialRequests"></textarea><br><br>
+
+        <label for="pets">Czy podróżujesz ze zwierzętami?</label>
+        <input type="checkbox" id="pets" name="pets"><br><br>
+
+        <input type="submit" value="Zarezerwuj">
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Restauracja. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
