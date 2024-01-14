@@ -81,6 +81,44 @@ app.get('/get-reservations', (req, res) => {
     });
 });
 
+app.post('/save-opinion', (req, res) => {
+    const newOpinion = req.body;
+
+    fs.readFile('ratings.json', (err, data) => {
+        let opinions = [];
+
+        if (err) {
+            if (err.code === 'ENOENT') {
+                // File does not exist, initialize as an empty array
+                opinions = [];
+            } else {
+                // Other errors (e.g., file read error)
+                console.error('Error reading from file:', err);
+                return res.status(500).send({ message: 'Error reading existing ratings' });
+            }
+        } else if (data.length > 0) {
+            try {
+                opinions = JSON.parse(data);
+            } catch (parseError) {
+                console.error('Error parsing JSON:', parseError);
+                return res.status(500).send({ message: 'Error processing data' });
+            }
+        }
+
+        // Add the new opinion to the array
+        opinions.push(newOpinion);
+
+        // Write the updated array back to 'rating.json'
+        fs.writeFile('ratings.json', JSON.stringify(opinions, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing to file:', err);
+                return res.status(500).send({ message: 'Error saving the rating' });
+            }
+            res.send({ message: 'Rating saved successfully' });
+        });
+    });
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);

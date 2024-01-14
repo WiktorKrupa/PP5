@@ -1,36 +1,24 @@
-
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     // Fetch the existing rating data from the server
-        //     fetch('path-to-your-server/ratings-data.json')
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             document.getElementById('numRatings').textContent = data.numRatings;
-        //             document.getElementById('averageRating').textContent = data.averageRating.toFixed(1);
-        //         })
-        //         .catch(error => {
-        //             console.error('Error fetching ratings:', error);
-        //         });
-
-        //     const form = document.getElementById('ratingForm');
-        //     form.addEventListener('submit', function(event) {
-        //         event.preventDefault();
-        //         const rating = document.getElementById('rating').value;
-
-        //         // Send the new rating to the server
-        //         fetch('path-to-your-server/save-rating', {
-        //             method: 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/json',
-        //             },
-        //             body: JSON.stringify({ rating: rating })
-        //         })
-        //         .then(response => response.json())
-        //         .then(updatedData => {
-        //             document.getElementById('numRatings').textContent = updatedData.numRatings;
-        //             document.getElementById('averageRating').textContent = updatedData.averageRating.toFixed(1);
-        //         })
-        //         .catch(error => {
-        //             console.error('Error submitting rating:', error);
-        //         });
-        //     });
-        // });
+document.addEventListener('DOMContentLoaded', (event) => {
+        const form = document.getElementById('ratingForm');
+    
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+            const rate = document.getElementById('rating').value;
+            const opinion = document.getElementById('opinion').value;
+            saveUserRating(rate, opinion);
+        });
+    });
+    
+    function saveUserRating(rate, opinion) {
+        fetch('http://localhost:3000/save-opinion', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ rate: rate, opinion: opinion })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
+    

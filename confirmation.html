@@ -5,40 +5,52 @@
 </head>
 <body>
     <h1>Reservation Confirmation</h1>
-    <a href="index.html">Powrót do Strony Głównej</a> | 
-    <div id="reservation-details"></div>
-    
+    <a href="index.html">Powrót do Strony Głównej</a>
+
+    <form id="confirmationForm">
+        <label for="name">Imię i Nazwisko:</label>
+        <input type="text" id="name" name="name" required readonly><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required readonly><br><br>
+
+        <label for="phone">Numer Telefonu:</label>
+        <input type="tel" id="phone" name="phone" required readonly><br><br>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required readonly><br><br>
+
+        <label for="adults">Liczba Dorosłych:</label>
+        <input type="number" id="adults" name="adults" min="1" required readonly><br><br>
+
+        <label for="children">Liczba Dzieci:</label>
+        <input type="number" id="children" name="children" min="0" required readonly><br><br>
+
+        <label for="specialRequests">Specjalne Życzenia:</label>
+        <textarea id="specialRequests" name="specialRequests" disabled></textarea><br><br>
+
+        <label for="pets">Czy przyjdziesz do nas ze zwierzętami?</label>
+        <input type="checkbox" id="pets" name="pets" disabled><br><br>
+    </form>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetch('js/reservations.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
+                .then(response => response.json())
                 .then(data => {
-                    const lastReservation = data[data.length - 1]; // Assuming data is an array of reservations
-                    const detailsContainer = document.getElementById('reservation-details');
+                    const lastReservation = data[data.length - 1];
                     if (lastReservation) {
-                        detailsContainer.innerHTML = `<p>Reservation for: ${lastReservation.name}</p>
-                                                      <p>Email: ${lastReservation.email}</p>
-                                                      <p>Phone: ${lastReservation.phone}</p>
-                                                      <p>Date: ${lastReservation.date}</p>
-                                                      <p>Adults: ${lastReservation.adults}</p>
-                                                      <p>Children: ${lastReservation.children}</p>
-                                                      <p>Special Requests: ${lastReservation.specialRequests}</p>
-                                                      <p>Pets: ${lastReservation.pets ? 'Yes' : 'No'}</p>`;
-                    } else {
-                        detailsContainer.innerHTML = '<p>No reservation details found.</p>';
+                        document.getElementById('name').value = lastReservation.name;
+                        document.getElementById('email').value = lastReservation.email;
+                        document.getElementById('phone').value = lastReservation.phone;
+                        document.getElementById('date').value = lastReservation.date;
+                        document.getElementById('adults').value = lastReservation.adults;
+                        document.getElementById('children').value = lastReservation.children;
+                        document.getElementById('specialRequests').value = lastReservation.specialRequests;
+                        document.getElementById('pets').checked = lastReservation.pets;
                     }
                 })
-                .catch(error => {
-                    console.error('Could not load reservations:', error);
-                    const detailsContainer = document.getElementById('reservation-details');
-                    detailsContainer.innerHTML = '<p>Error loading reservation details.</p>';
-                });
+                .catch(error => console.error('Could not load reservations:', error));
         });
     </script>
 </body>
