@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Potwierdzenie Rezerwacji</title>
+    <title>Reservation Confirmation</title>
 </head>
 <body>
-    <header>
-        <h1>Potwierdzenie Rezerwacji</h1>
-    </header>
-    <nav>
-        <a href="booking.html">Powrót do Formularza Rezerwacji</a> | 
-        <a href="index.html">Powrót do Strony Głównej</a>
-    </nav>
-    <section>
-        <p>Dziękujemy za rezerwację! Wkrótce otrzymasz potwierdzenie na swój e-mail.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Restauracja. Wszelkie prawa zastrzeżone.</p>
-    </footer>
+    <h1>Reservation Confirmation</h1>
+    <a href="index.html">Powrót do Strony Głównej</a> | 
+    <div id="reservation-details"></div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('js/reservations.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const lastReservation = data[data.length - 1]; // Assuming data is an array of reservations
+                    const detailsContainer = document.getElementById('reservation-details');
+                    if (lastReservation) {
+                        detailsContainer.innerHTML = `<p>Reservation for: ${lastReservation.name}</p>
+                                                      <p>Email: ${lastReservation.email}</p>
+                                                      <p>Phone: ${lastReservation.phone}</p>
+                                                      <p>Date: ${lastReservation.date}</p>
+                                                      <p>Adults: ${lastReservation.adults}</p>
+                                                      <p>Children: ${lastReservation.children}</p>
+                                                      <p>Special Requests: ${lastReservation.specialRequests}</p>
+                                                      <p>Pets: ${lastReservation.pets ? 'Yes' : 'No'}</p>`;
+                    } else {
+                        detailsContainer.innerHTML = '<p>No reservation details found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Could not load reservations:', error);
+                    const detailsContainer = document.getElementById('reservation-details');
+                    detailsContainer.innerHTML = '<p>Error loading reservation details.</p>';
+                });
+        });
+    </script>
 </body>
 </html>

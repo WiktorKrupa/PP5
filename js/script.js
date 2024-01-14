@@ -1,4 +1,3 @@
-
 function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -30,10 +29,11 @@ function handleFormSubmit(event) {
     })
     .then(data => {
         console.log('Success:', data);
-        // Optional: Redirect to a confirmation page or display success message
+        localStorage.setItem('recentReservation', JSON.stringify(FormData)); // Store the reservation data
+        window.location.href = '../confirmation.html'; // Redirect to the confirmation page
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.error('Error :', error);
 });
 
 }
@@ -42,5 +42,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('bookingForm');
     form.addEventListener('submit', handleFormSubmit);
 });
-
-

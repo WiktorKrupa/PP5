@@ -1,1 +1,12 @@
-{}
+[
+  {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "phone": "1234567890",
+    "date": "2024-02-15",
+    "adults": "2",
+    "children": "1",
+    "specialRequests": "Vegetarian meal",
+    "pets": false
+  }
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rate Us</title>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <h1>Rate Us</h1>
+    <a href="index.html">Powrót do Strony Głównej</a> | 
+    <form id="ratingForm">
+        <label for="rating">Your rating:</label>
+        <select name="rating" id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="ratingsSummary">
+        <p>Number of Ratings: <span id="numRatings">0</span></p>
+        <p>Average Rating: <span id="averageRating">0</span></p>
+    </div>
+
+    
+</body>
+</html>

@@ -38,7 +38,7 @@ app.post('/save-reservation', (req, res) => {
                 // If parsing fails, send an error response.
                 console.error('Error parsing JSON:', parseErr);
                 res.status(502).send({ message: 'Error processing data' });
-                //return;
+                return;
             }
         }
 
