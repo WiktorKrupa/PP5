@@ -14,7 +14,7 @@ function handleFormSubmit(event) {
 
     console.log("Form Data Submitted:", formData);
 
-    fetch('http://localhost:3000/save-reservation', { // Use the correct server URL
+    fetch('http://localhost:3000/save-reservation', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

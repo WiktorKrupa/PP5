@@ -11,8 +11,7 @@ app.use(cors());
 app.get('/', (req, res) => {
     console.log("Root path accessed");
     res.send('Welcome to the Reservation System');
-    // Alternatively, use res.sendFile to send an HTML file:
-    // res.sendFile(__dirname + '/path_to_your_index_html');
+
 });
 
 // Save reservation
