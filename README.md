@@ -2,7 +2,9 @@
 Projekt na PP5
 
 uruchonienie serwera
+
 cd ../PP5/js
+
 node serverSetup.js
 
 strona główna - index.html
@@ -36,7 +38,3 @@ Oceń naszą restaurację - RateUs.html
   wybór oceny
   opinia
   submit zapisuje opinie w pliku json
-<<<<<<< HEAD
-
-=======
->>>>>>> 3b4e7a9 (readme)
