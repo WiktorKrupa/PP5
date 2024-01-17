@@ -1,97 +1,203 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public\css\confirmation.css">
-    <link rel="stylesheet" href="public\css\headerFooter.css">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Notable&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Codystar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public\css\form.css" />
+    <link rel="stylesheet" href="public\css\headerFooter.css" />
     <title>Reservation Confirmation</title>
-</head>
-<body>
-    <div class = "container">
-        <header class = "d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <div class = "logo">
-              <img class="logo-picture " src="https://cdn-icons-png.flaticon.com/256/1623/1623786.png" width="120">
-              <h1 class="shop-name">Nice Ramen</h1>
-            </div>
-            <div class ="greeting-container">
-              <ul class="nav nav-pills">
-                  <li class="nav-item"><a href="index.html" class="nav-link header">Strona główna</a></li>
-                  <li class="nav-item"><a href="booking.html" class="nav-link header">Zarezerwuj stolik</a></li>
-                  <li class="nav-item"><a href="CheckByEmail.html" class="nav-link main">Sprawdź swoje rezerwacje</a></li>
-                  <li class="nav-item"><a href="RateUs.html" class="nav-link header">Oceń naszą restaurację</a></li>
-                </ul>
-            </div>
-        </header>
-    </div>
-    <h1>Potwierdzenie rezerwacji</h1>
-    <form id="confirmationForm">
-        <div class = "confirmationForm">
-            <div class = "contents">
-                <label for="name">Imię i Nazwisko:</label>
-                <input type="text" id="name" name="name" required readonly><br><br>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required readonly><br><br>
-
-                <label for="phone">Numer Telefonu:</label>
-                <input type="tel" id="phone" name="phone" required readonly><br><br>
-
-                <label for="date">Data:</label>
-                <input type="date" id="date" name="date" required readonly><br><br>
-
-                <label for="adults">Liczba Dorosłych:</label>
-                <input type="number" id="adults" name="adults" min="1" required readonly><br><br>
-
-                <label for="children">Liczba Dzieci:</label>
-                <input type="number" id="children" name="children" min="0" required readonly><br><br>
-
-                <label for="specialRequests">Specjalne Życzenia:</label>
-                <textarea id="specialRequests" name="specialRequests" disabled></textarea><br><br>
-
-                <label for="pets">Czy przyjdziesz do nas ze zwierzętami?</label>
-                <input type="checkbox" id="pets" name="pets" disabled><br><br>
-            </div>
+  </head>
+  <body>
+    <div class="container">
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+        <div class="logo">
+          <img
+            class="logo-picture"
+            src="https://cdn-icons-png.flaticon.com/256/1623/1623786.png"
+            width="120"
+          />
+          <h1 class="shop-name">Nice Ramen</h1>
         </div>
+        <div class="greeting-container">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link header">Strona główna</a>
+            </li>
+            <li class="nav-item">
+              <a href="booking.html" class="nav-link header"
+                >Zarezerwuj stolik</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="CheckByEmail.html" class="nav-link main"
+                >Sprawdź swoje rezerwacje</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="RateUs.html" class="nav-link header"
+                >Oceń naszą restaurację</a
+              >
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <h1 class="heading">Potwierdzenie rezerwacji</h1>
+    <form id="confirmationForm">
+      <div class="confirmationForm">
+        <div class="contents">
+          <label for="name">Imię i Nazwisko:</label>
+          <input class = "C"
+            type="text"
+            id="name"
+            name="name"
+            required
+            readonly
+          /><br /><br />
+
+          <label for="email">E-mail:</label>
+          <input class = "C"
+            type="email"
+            id="email"
+            name="email"
+            required
+            readonly
+          /><br /><br />
+
+          <label for="phone">Numer Telefonu:</label>
+          <input class = "C"
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            readonly
+          /><br /><br />
+
+          <label for="date">Data:</label>
+          <input class = "C"
+            type="date"
+            id="date"
+            name="date"
+            required
+            readonly
+          /><br /><br />
+
+          <label for="adults">Liczba Dorosłych:</label>
+          <input class = "C"
+            type="number"
+            id="adults"
+            name="adults"
+            min="1"
+            required
+            readonly
+          /><br /><br />
+
+          <label for="children">Liczba Dzieci:</label>
+          <input class = "C"
+            type="number"
+            id="children"
+            name="children"
+            min="0"
+            required
+            readonly
+          /><br /><br />
+
+          <label for="specialRequests">Specjalne Życzenia:</label>
+          <textarea class = "C"
+            id="specialRequests"
+            name="specialRequests"
+            disabled
+          ></textarea class = "C"
+          ><br /><br />
+
+          <label for="pets">Czy przyjdziesz do nas ze zwierzętami?</label>
+          <input class = "C" type="checkbox" id="pets" name="pets" disabled /><br /><br />
+        </div>
+      </div>
     </form>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('js/reservations.json')
-                .then(response => response.json())
-                .then(data => {
-                    const lastReservation = data[data.length - 1];
-                    if (lastReservation) {
-                        document.getElementById('name').value = lastReservation.name;
-                        document.getElementById('email').value = lastReservation.email;
-                        document.getElementById('phone').value = lastReservation.phone;
-                        document.getElementById('date').value = lastReservation.date;
-                        document.getElementById('adults').value = lastReservation.adults;
-                        document.getElementById('children').value = lastReservation.children;
-                        document.getElementById('specialRequests').value = lastReservation.specialRequests;
-                        document.getElementById('pets').checked = lastReservation.pets;
-                    }
-                })
-                .catch(error => console.error('Could not load reservations:', error));
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("js/reservations.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const lastReservation = data[data.length - 1];
+            if (lastReservation) {
+              document.getElementById("name").value = lastReservation.name;
+              document.getElementById("email").value = lastReservation.email;
+              document.getElementById("phone").value = lastReservation.phone;
+              document.getElementById("date").value = lastReservation.date;
+              document.getElementById("adults").value = lastReservation.adults;
+              document.getElementById("children").value =
+                lastReservation.children;
+              document.getElementById("specialRequests").value =
+                lastReservation.specialRequests;
+              document.getElementById("pets").checked = lastReservation.pets;
+            }
+          })
+          .catch((error) =>
+            console.error("Could not load reservations:", error)
+          );
+      });
     </script>
     <div class="container">
-        <footer class="d-flex flex-wrap justify-content-center py-3 mb-4 border-top footer-bar">
-          <p class="col-md-4 mb-0 align-self-center footer-text">&copy; 2024 Restauracja. Wszelkie prawa zastrzeżone.</p>
-          <ul class="nav-pills">
-            <img class = "image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/1046/1046747.png" height="30">
-            <li class="nav nav-item"><a href="#" class="nav-link footer">Menu</a></li>
-            <img class = "image-f align-self-center" src = "https://cdn-icons-png.flaticon.com/128/2985/2985659.png" height="30">          
-            <li class="nav nav-item"><a href="#" class="nav-link footer">Zdjęcia</a></li>
-            <img class = "image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/3771/3771518.png" height="30">          
-            <li class="nav nav-item"><a href="#" class="nav-link footer">Kontakt</a></li>
-          </ul>
-        </footer>
-      </div>
-</body>
+      <footer
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-top footer-bar"
+      >
+        <p class="col-md-4 mb-0 align-self-center footer-text">
+          &copy; 2024 Restauracja. Wszelkie prawa zastrzeżone.
+        </p>
+        <ul class="nav-pills">
+          <img
+            class="image-f align-self-center"
+            src="https://cdn-icons-png.flaticon.com/128/1046/1046747.png"
+            height="30"
+          />
+          <li class="nav nav-item">
+            <a href="#" class="nav-link footer">Menu</a>
+          </li>
+          <img
+            class="image-f align-self-center"
+            src="https://cdn-icons-png.flaticon.com/128/2985/2985659.png"
+            height="30"
+          />
+          <li class="nav nav-item">
+            <a href="#" class="nav-link footer">Zdjęcia</a>
+          </li>
+          <img
+            class="image-f align-self-center"
+            src="https://cdn-icons-png.flaticon.com/128/3771/3771518.png"
+            height="30"
+          />
+          <li class="nav nav-item">
+            <a href="#" class="nav-link footer">Kontakt</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>

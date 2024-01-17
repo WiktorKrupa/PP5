@@ -58,5 +58,25 @@
     "children": "0",
     "specialRequests": "Jedzenie dla moich zwierzątek",
     "pets": true
+  },
+  {
+    "name": "Joanna Maślankiewicz",
+    "email": "jmas@gmail.com",
+    "phone": "888555111",
+    "date": "2024-11-14",
+    "adults": "5",
+    "children": "3",
+    "specialRequests": "-",
+    "pets": false
+  },
+  {
+    "name": "Julia Mękarska",
+    "email": "juliaa.mekarska@gmail.com",
+    "phone": "512452055",
+    "date": "2024-01-30",
+    "adults": "1",
+    "children": "1",
+    "specialRequests": "-",
+    "pets": true
   }
 ]

@@ -1,8 +1,13 @@
-html, body {
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
   background-image: url("https://cdn.dribbble.com/users/10810972/screenshots/17553167/media/e982b5f1d323488d60fc19bee82f88af.png?compressu003d1u0026resizeu003d400x300u0026verticalu003dcenter");
   background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0; }
+  background-repeat: no-repeat; }
 
 .greeting-container {
   display: flex;
@@ -12,9 +17,9 @@ html, body {
   border-radius: 20px; }
 
 .greeting {
-  font-family: 'Khand', sans-serif;
+  font-family: "Codystar", sans-serif;
   color: #e78b44;
-  font-weight: 700;
+  font-weight: 1000;
   font-size: 50px;
   list-style: none;
   padding: 20px;
@@ -24,13 +29,15 @@ html, body {
   text-align: center; }
 
 .shop-name {
-  font-family: 'Notable', sans-serif;
+  font-family: "Notable", sans-serif;
   font-size: 70px;
   color: #e45e57; }
 
 .container {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column;
+  min-height: 40vh; }
 
 .nav-bar {
   width: 100%; }
@@ -46,14 +53,17 @@ html, body {
   margin: 0 10px; }
 
 .header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   color: #e45e57;
   font-size: 25px;
-  font-weight: 500; }
+  font-weight: 400; }
 
 .header:hover {
   color: #752a27; }
 
 .main {
+  font-family: "Montserrat", sans-serif;
   background-color: #f8b2b6;
   color: white;
   border-radius: 30px;
@@ -69,10 +79,11 @@ header {
   margin-bottom: 20px; }
 
 .footer-bar {
-  width: 100%; }
+  width: 100%;
+  margin-top: auto; }
 
 footer {
-  margin-top: 20px; }
+  margin-top: auto; }
 
 .footer {
   color: #e45e57;
@@ -84,4 +95,5 @@ footer {
 
 .footer-text {
   color: #e9743a;
-  font-size: 20px; }
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0); }
