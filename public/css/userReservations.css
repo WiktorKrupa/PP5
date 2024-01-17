@@ -1,0 +1,32 @@
+/* userReservations.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; }
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: left; }
+
+th {
+  background-color: #f2f2f2; }
+
+/* Optional: Add some styling to improve readability */
+h1 {
+  text-align: center; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+#reservations-container {
+  margin-top: 20px;
+  overflow-x: auto; }
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 600px) {
+  th, td {
+    font-size: 14px; }
+  h1 {
+    font-size: 24px; } }

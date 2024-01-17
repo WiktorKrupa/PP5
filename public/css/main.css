@@ -1,0 +1,31 @@
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 5px; }
+
+.row1 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+  grid-auto-flow: column; }
+
+.column2 {
+  float: left;
+  width: 33.33%;
+  padding: 5px; }
+
+.row2 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+  grid-auto-flow: column; }
+
+.image {
+  border-radius: 10%;
+  transition: 1s; }
+
+.image:hover {
+  transform: scale(1.2);
+  z-index: 2; }

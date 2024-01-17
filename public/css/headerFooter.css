@@ -1,0 +1,87 @@
+html, body {
+  background-image: url("https://cdn.dribbble.com/users/10810972/screenshots/17553167/media/e982b5f1d323488d60fc19bee82f88af.png?compressu003d1u0026resizeu003d400x300u0026verticalu003dcenter");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0; }
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.55);
+  border-radius: 20px; }
+
+.greeting {
+  font-family: 'Khand', sans-serif;
+  color: #e78b44;
+  font-weight: 700;
+  font-size: 50px;
+  list-style: none;
+  padding: 20px;
+  text-align: center; }
+
+.logo {
+  text-align: center; }
+
+.shop-name {
+  font-family: 'Notable', sans-serif;
+  font-size: 70px;
+  color: #e45e57; }
+
+.container {
+  display: flex;
+  justify-content: center; }
+
+.nav-bar {
+  width: 100%; }
+
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 10px; }
+
+.nav-item {
+  margin: 0 10px; }
+
+.header {
+  color: #e45e57;
+  font-size: 25px;
+  font-weight: 500; }
+
+.header:hover {
+  color: #752a27; }
+
+.main {
+  background-color: #f8b2b6;
+  color: white;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 20px; }
+
+.main:hover {
+  background-color: #c67a7e;
+  color: #ffd080; }
+
+header {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.footer-bar {
+  width: 100%; }
+
+footer {
+  margin-top: 20px; }
+
+.footer {
+  color: #e45e57;
+  font-size: 20px;
+  font-weight: 500; }
+
+.footer:hover {
+  color: #a4302a; }
+
+.footer-text {
+  color: #e9743a;
+  font-size: 20px; }

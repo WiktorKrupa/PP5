@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public\css\rateUs.css">
+    <link rel="stylesheet" href="public\css\headerFooter.css">
     <title>Rate Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/rating.js" defer></script>
 </head>
 <body>
+    <div class = "container">
+        <header class = "d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <div class = "logo">
+              <img class="logo-picture " src="https://cdn-icons-png.flaticon.com/256/1623/1623786.png" width="120">
+              <h1 class="shop-name">Nice Ramen</h1>
+            </div>
+            <div class ="greeting-container">
+              <ul class="nav nav-pills">
+                  <li class="nav-item"><a href="index.html" class="nav-link header">Strona główna</a></li>
+                  <li class="nav-item"><a href="booking.html" class="nav-link header">Zarezerwuj stolik</a></li>
+                  <li class="nav-item"><a href="CheckByEmail.html" class="nav-link header">Sprawdź swoje rezerwacje</a></li>
+                  <li class="nav-item"><a href="RateUs.html" class="nav-link main">Oceń naszą restaurację</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
     <h1>Rate Us</h1>
-    <a href="index.html">Powrót do Strony Głównej</a> | 
     <form id="ratingForm">
-        <label for="rating">Your rating:</label>
-        <select name="rating" id="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        
-        <br>
-        <br>
-        
-        <label for="opinion">Zostawi Opinie:</label>
-        <textarea name="opinion" id="opinion"></textarea>
+      <div class = "ratingForm">
+        <div class = "components">
+            <label for="rating">Your rating:</label>
+            <select name="rating" id="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+            <br>
+            <br>
+            
+            <label for="opinion">Zostawi Opinie:</label>
+            <textarea name="opinion" id="opinion"></textarea>
 
-        <input type="submit" value="Submit">
+            <input type="submit" value="Submit">
+        </div>
+      </div>
     </form>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-center py-3 mb-4 border-top footer-bar">
+          <p class="col-md-4 mb-0 align-self-center footer-text">&copy; 2024 Restauracja. Wszelkie prawa zastrzeżone.</p>
+          <ul class="nav-pills">
+            <img class = "image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/1046/1046747.png" height="30">
+            <li class="nav nav-item"><a href="#" class="nav-link footer">Menu</a></li>
+            <img class = "image-f align-self-center" src = "https://cdn-icons-png.flaticon.com/128/2985/2985659.png" height="30">          
+            <li class="nav nav-item"><a href="#" class="nav-link footer">Zdjęcia</a></li>
+            <img class = "image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/3771/3771518.png" height="30">          
+            <li class="nav nav-item"><a href="#" class="nav-link footer">Kontakt</a></li>
+          </ul>
+        </footer>
+    </div>
 </body>
 </html>

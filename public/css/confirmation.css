@@ -1,0 +1,27 @@
+h1 {
+  font-family: 'Onest', sans-serif;
+  margin: auto;
+  text-align: center;
+  color: #ca424f;
+  font-weight: 800;
+  margin-bottom: 50px; }
+
+.confirmationForm {
+  width: 450px;
+  height: 550px;
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  border-radius: 30px; }
+
+label {
+  font-weight: 400; }
+
+input {
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #bababa; }
+
+textarea {
+  border-radius: 10px;
+  border-color: #bababa; }

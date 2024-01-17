@@ -1,0 +1,63 @@
+h1 {
+  font-family: 'Onest', sans-serif;
+  margin: auto;
+  text-align: center;
+  color: #ca424f;
+  font-weight: 800;
+  margin-bottom: 50px; }
+
+.ratingForm {
+  width: 450px;
+  height: 250px;
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  border-radius: 30px; }
+
+label {
+  font-weight: 400; }
+
+select {
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #bababa; }
+
+textarea {
+  border-radius: 10px;
+  border-color: #bababa; }
+
+[type="submit"] {
+  width: 120px;
+  height: 60;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  background-color: #eca973;
+  border-color: #d3925d;
+  border-radius: 10px; }
+
+[type="submit"]:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white; }
+
+[type="submit"]:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s; }
+
+[type="submit"]:active {
+  top: 1px; }
