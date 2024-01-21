@@ -86,7 +86,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             const menuContainer = document.getElementById("menu-container");
 
-            fetch("js\menu.json")
+            fetch("js/menu.json")
                 .then(response => response.json())
                 .then(data => displayMenu(data))
                 .catch(error => console.error("Error loading menu data:", error));
