@@ -1,10 +1,7 @@
-# PP5
-Projekt na PP5
+# Strona do rezerwacji stolika w restauracjj
 
-uruchonienie serwera
-
+uruchonienie serwera:
 cd ../PP5/js
-
 node serverSetup.js
 
 strona główna - index.html
