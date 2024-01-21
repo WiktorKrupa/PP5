@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Notable&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Codystar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public\css\menu.css" />
+    <link rel="stylesheet" href="public\css\headerFooter.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restauracja - Menu</title>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <div class="logo">
+                <img class="logo-picture" src="https://cdn-icons-png.flaticon.com/256/1623/1623786.png" width="120" />
+                <h1 class="shop-name">Nice Ramen</h1>
+            </div>
+            <div class="greeting-container">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link header">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link header">Zarezerwuj stolik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="CheckByEmail.html" class="nav-link header">Sprawdź swoje rezerwacje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="RateUs.html" class="nav-link header">Oceń naszą restaurację</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <section id="menu-section" class="mb-4">
+            <h2 class="text-center mt-4 mb-4 menu">Menu</h2>
+            <div id="menu-container" class="row table-container"></div>
+        </section>
+    </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-center py-3 mb-4 border-top footer-bar">
+            <p class="col-md-4 mb-0 align-self-center footer-text">
+                &copy; 2024 Restauracja. Wszelkie prawa zastrzeżone.
+            </p>
+            <ul class="nav-pills">
+                <img class="image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/1046/1046747.png" height="30" />
+                <li class="nav nav-item">
+                    <a href="menu.html" class="nav-link footer">Menu</a>
+                </li>
+                <img class="image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/2985/2985659.png" height="30" />
+                <li class="nav nav-item">
+                    <a href="photos.html" class="nav-link footer">Zdjęcia</a>
+                </li>
+                <img class="image-f align-self-center" src="https://cdn-icons-png.flaticon.com/128/3771/3771518.png" height="30" />
+                <li class="nav nav-item">
+                    <a href="contact.html" class="nav-link footer">Kontakt</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuContainer = document.getElementById("menu-container");
+
+            fetch("js/menu.json")
+                .then(response => response.json())
+                .then(data => displayMenu(data))
+                .catch(error => console.error("Error loading menu data:", error));
+
+            function displayMenu(data) {
+                const classicItems = data.ramen.classic;
+                const specialtyItems = data.ramen.specialty;
+                const vegetarianItems = data.ramen.vegetarian;
+                const sidesItems = data.sides;
+                const dessertsItems = data.desserts;
+                const drinksItemserts = data.drinks;
+
+                menuContainer.innerHTML += generateTable("Classic Ramen", classicItems);
+                menuContainer.innerHTML += generateTable("Specialty Ramen", specialtyItems);
+                menuContainer.innerHTML += generateTable("Vegetarian Ramen", vegetarianItems);
+                menuContainer.innerHTML += generateTable("Sides", sidesItems);
+                menuContainer.innerHTML += generateTable("Desserts", dessertsItems);
+                menuContainer.innerHTML += generateTable("Drinks", drinksItemserts);
+
+            }
+
+            function generateTable(category, items) {
+                let tableHtml = `
+                    <h2 class="text-center mt-4 mb-4">${category}</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Danie</th>
+                                <th scope="col">Price (zł)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                items.forEach(item => {
+                    tableHtml += `
+                        <tr>
+                            <td>${item.name}</td>
+                            <td>${item.price}</td>
+                        </tr>
+                    `;
+                });
+
+                tableHtml += `
+                        </tbody>
+                    </table>
+                `;
+
+                return tableHtml;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,11 +1,3 @@
-.heading {
-  font-family: "Montserrat", sans-serif;
-  margin: auto;
-  text-align: center;
-  color: #ca424f;
-  font-weight: 800;
-  margin-bottom: 50px; }
-
 .form {
   width: 450px;
   height: auto;
@@ -70,27 +62,6 @@ textarea {
   border-color: #d3925d;
   border-radius: 30px; }
 
-[type="submit"]:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 4em;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.5s;
-  box-shadow: 0 0 10px 40px white; }
-
-[type="submit"]:active:after {
-  box-shadow: 0 0 0 0 white;
-  position: absolute;
-  border-radius: 4em;
-  left: 0;
-  top: 0;
-  opacity: 1;
-  transition: 0s; }
-
-[type="submit"]:active {
-  top: 1px; }
+input[type="submit"]:hover {
+  background-color: #ac4a23;
+  color: #cf6969; }

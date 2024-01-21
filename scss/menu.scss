@@ -1,0 +1,50 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.table {
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.table-bordered {
+    border: 2px solid #ffcedb;
+}
+
+.table th,
+.table td {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(117, 42, 39);
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 2px solid #ffcedb;
+    background-color: #b8d2f0;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 3px solid #ffcedb;
+}
+
+.text-center {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(117, 42, 39);
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.menu {
+    font-size: 50px;
+    color: rgb(210, 108, 64);
+}
+

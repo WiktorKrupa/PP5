@@ -1,0 +1,77 @@
+{
+    "ramen": {
+      "classic": [
+        {"name": "Shoyu Ramen", "price": 18.99},
+        {"name": "Miso Ramen", "price": 19.99},
+        {"name": "Shio Ramen", "price": 17.99},
+        {"name": "Chashu Ramen", "price": 21.99},
+        {"name": "Katsu Ramen", "price": 22.99},
+        {"name": "Ebi Ramen", "price": 24.99},
+        {"name": "Tori Paitan Ramen", "price": 20.99},
+        {"name": "Negi Miso Ramen", "price": 19.99},
+        {"name": "Tonkotsu Ramen", "price": 23.99},
+        {"name": "Spicy Garlic Ramen", "price": 21.99}
+      ],
+      "specialty": [
+        {"name": "Tan Tan Ramen", "price": 24.99},
+        {"name": "Kimchi Ramen", "price": 22.99},
+        {"name": "Curry Ramen", "price": 21.99},
+        {"name": "Seafood Ramen", "price": 26.99},
+        {"name": "Teriyaki Ramen", "price": 23.99},
+        {"name": "Goma Ramen", "price": 20.99},
+        {"name": "Yuzu Shio Ramen", "price": 25.99},
+        {"name": "Spicy Miso Ramen", "price": 22.99},
+        {"name": "Shrimp Tempura Ramen", "price": 27.99},
+        {"name": "Sesame Chicken Ramen", "price": 23.99}
+      ],
+      "vegetarian": [
+        {"name": "Vegetarian Miso Ramen", "price": 18.99},
+        {"name": "Ramen with Fresh Vegetables", "price": 17.99},
+        {"name": "Tofu and Spinach Ramen", "price": 19.99},
+        {"name": "Yasai Ramen", "price": 20.99},
+        {"name": "Mushroom Ramen", "price": 21.99},
+        {"name": "Vegan Spicy Miso Ramen", "price": 22.99},
+        {"name": "Vegan Tan Tan Ramen", "price": 24.99},
+        {"name": "Spicy Edamame Ramen", "price": 20.99},
+        {"name": "Vegan Curry Ramen", "price": 21.99},
+        {"name": "Vegan Goma Ramen", "price": 19.99}
+      ]
+    },
+    "sides": [
+      {"name": "Gyoza", "price": 12.99},
+      {"name": "Edamame", "price": 9.99},
+      {"name": "Wakame Salad", "price": 8.99},
+      {"name": "Takoyaki", "price": 14.99},
+      {"name": "Tamago", "price": 7.99},
+      {"name": "Yaki Tori", "price": 16.99},
+      {"name": "Kimbap", "price": 15.99},
+      {"name": "Tempura Vegetables", "price": 11.99},
+      {"name": "Chawanmushi", "price": 13.99},
+      {"name": "Korokke", "price": 10.99}
+    ],
+    "drinks": [
+      {"name": "Green Tea", "price": 4.99},
+      {"name": "Matcha Latte", "price": 8.99},
+      {"name": "Japanese Fruit Juices", "price": 6.99},
+      {"name": "Ramune", "price": 5.99},
+      {"name": "Sake (100ml)", "price": 12.99},
+      {"name": "Uji Maccha", "price": 7.99},
+      {"name": "Calpico", "price": 6.99},
+      {"name": "Yuzu Lemonade", "price": 8.99},
+      {"name": "Sencha", "price": 5.99},
+      {"name": "Plum Wine", "price": 10.99}
+    ],
+    "desserts": [
+      {"name": "Mochi Ice Cream (3 pieces)", "price": 9.99},
+      {"name": "Dorayaki (2 pieces)", "price": 7.99},
+      {"name": "Anmitsu", "price": 11.99},
+      {"name": "Taiyaki (1 piece)", "price": 8.99},
+      {"name": "Matcha Parfait", "price": 12.99},
+      {"name": "Wagashi (5 pieces)", "price": 10.99},
+      {"name": "Kuzumochi", "price": 6.99},
+      {"name": "Green Tea Cheesecake", "price": 14.99},
+      {"name": "Yuzu Sorbet", "price": 7.99},
+      {"name": "Japanese Cotton Cheesecake", "price": 16.99}
+    ]
+  }
+  

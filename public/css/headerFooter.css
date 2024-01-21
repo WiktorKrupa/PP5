@@ -1,4 +1,3 @@
-html,
 body {
   height: 100%;
   margin: 0;
@@ -32,6 +31,17 @@ body {
   font-family: "Notable", sans-serif;
   font-size: 70px;
   color: #e45e57; }
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  text-align: center;
+  color: #ae4642;
+  font-weight: 800;
+  margin-bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 350px;
+  border-radius: 20px; }
 
 .container {
   display: flex;

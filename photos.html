@@ -25,9 +25,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="public\css\form.css" />
+    <link rel="stylesheet" href="public\css\main.css" />
     <link rel="stylesheet" href="public\css\headerFooter.css" />
-    <title>Reservation Confirmation</title>
+    <title>Restauracja - Zdjęcia</title>
   </head>
   <body>
     <div class="container">
@@ -53,7 +53,7 @@
               >
             </li>
             <li class="nav-item">
-              <a href="CheckByEmail.html" class="nav-link main"
+              <a href="CheckByEmail.html" class="nav-link header"
                 >Sprawdź swoje rezerwacje</a
               >
             </li>
@@ -66,104 +66,60 @@
         </div>
       </header>
     </div>
-    <h1 class="heading">Potwierdzenie rezerwacji</h1>
-    <form id="confirmationForm">
-      <div class="confirmationForm">
-        <div class="contents">
-          <label for="name">Imię i Nazwisko:</label>
-          <input class = "C"
-            type="text"
-            id="name"
-            name="name"
-            required
-            readonly
-          /><br /><br />
-
-          <label for="email">E-mail:</label>
-          <input class = "C"
-            type="email"
-            id="email"
-            name="email"
-            required
-            readonly
-          /><br /><br />
-
-          <label for="phone">Numer Telefonu:</label>
-          <input class = "C"
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            readonly
-          /><br /><br />
-
-          <label for="date">Data:</label>
-          <input class = "C"
-            type="date"
-            id="date"
-            name="date"
-            required
-            readonly
-          /><br /><br />
-
-          <label for="adults">Liczba Dorosłych:</label>
-          <input class = "C"
-            type="number"
-            id="adults"
-            name="adults"
-            min="1"
-            required
-            readonly
-          /><br /><br />
-
-          <label for="children">Liczba Dzieci:</label>
-          <input class = "C"
-            type="number"
-            id="children"
-            name="children"
-            min="0"
-            required
-            readonly
-          /><br /><br />
-
-          <label for="specialRequests">Specjalne Życzenia:</label>
-          <textarea class = "C"
-            id="specialRequests"
-            name="specialRequests"
-            disabled
-          ></textarea class = "C"
-          ><br /><br />
-
-          <label for="pets">Czy przyjdziesz do nas ze zwierzętami?</label>
-          <input class = "C" type="checkbox" id="pets" name="pets" disabled /><br /><br />
-        </div>
+    <h1 class="heading">Nasze zdjęcia</h1>
+    <div class="row1">
+      <div class="column1">
+        <img
+          class="image"
+          src="https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/c4e7f587-e9e1-4953-b032-f58f82e91f4d/Derivates/4b8b814f-8562-4ad0-8db8-9939cb103685.jpg"
+          width="480"
+          height="360"
+        />
       </div>
-    </form>
+      <div class="column1">
+        <img
+          class="image"
+          src="https://www.killingthyme.net/wp-content/uploads/2022/03/spicy-shoyu-ramen-5.jpg"
+          width="480"
+          height="360"
+        />
+      </div>
+      <div class="column1">
+        <img
+          class="image"
+          src="https://www.lecreuset.co.za/recipes/wp-content/uploads/2020/01/Zen-Recipe-Site-Images11-554x554.jpg"
+          width="480"
+          height="360"
+        />
+      </div>
+    </div>
+    <div class="row2">
+      <div class="column2">
+        <img
+          class="image"
+          src="https://strefasushi.pl/wp-content/uploads/2020/07/Strefa-Sushiartykuly001_Easy-Resize.com_-1024x682.jpg"
+          width="480"
+          height="360"
+        />
+      </div>
+      <div class="column2">
+        <img
+          class="image"
+          src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2023/05/surtido-sushi-3045106.jpg?tf=1080x"
+          width="480"
+          height="360"
+        />
+      </div>
+      <div class="column2">
+        <img
+          class="image"
+          src="https://trinesmatblogg.no/app/uploads/2022/09/IMG_0173.jpg"
+          width="480"
+          height="360"
+        />
+      </div>
+    </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        fetch("js/reservations.json")
-          .then((response) => response.json())
-          .then((data) => {
-            const lastReservation = data[data.length - 1];
-            if (lastReservation) {
-              document.getElementById("name").value = lastReservation.name;
-              document.getElementById("email").value = lastReservation.email;
-              document.getElementById("phone").value = lastReservation.phone;
-              document.getElementById("date").value = lastReservation.date;
-              document.getElementById("adults").value = lastReservation.adults;
-              document.getElementById("children").value =
-                lastReservation.children;
-              document.getElementById("specialRequests").value =
-                lastReservation.specialRequests;
-              document.getElementById("pets").checked = lastReservation.pets;
-            }
-          })
-          .catch((error) =>
-            console.error("Could not load reservations:", error)
-          );
-      });
-    </script>
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-center py-3 mb-4 border-top footer-bar">
           <p class="col-md-4 mb-0 align-self-center footer-text">
