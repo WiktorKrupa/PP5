@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
         form.addEventListener('submit', function(e) {
             e.preventDefault(); // Prevent the default form submission
-            const rate = document.getElementById('rating').value;
+            const rate = document.querySelector('.rate').value;
             const opinion = document.getElementById('opinion').value;
             saveUserRating(rate, opinion);
         });
@@ -21,4 +21,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
         .then(data => console.log(data))
         .catch(error => console.error('Error:', error));
     }
-    

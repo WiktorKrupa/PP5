@@ -65,3 +65,40 @@ textarea {
 input[type="submit"]:hover {
   background-color: #ac4a23;
   color: #cf6969; }
+
+.ratingStars {
+  background: #ffffff;
+  height: 50px;
+  width: 250px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.ratingStars input{
+  position: absolute;
+  left: -99999px;
+}
+
+.ratingStars label {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  color: transparent;
+}
+
+.ratingStars label::before {
+  content: '★';
+  color: #c0c0c0;
+  font-size: 30px;
+  line-height: 30px;
+  margin-right: -100%;
+}
+
+.ratingStars label:hover::before,
+.ratingStars label:hover ~ label::before,
+.ratingStars input:checked ~ label::before {
+  color: #ac4a23;
+}

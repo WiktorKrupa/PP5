@@ -22,5 +22,19 @@
   {
     "rate": "4",
     "opinion": "Całkiem spoko"
+  },
+  {
+    "opinion": "Nie polecam"
+  },
+  {
+    "opinion": "abc"
+  },
+  {
+    "rate": "5",
+    "opinion": "dbr"
+  },
+  {
+    "rate": "5",
+    "opinion": "w pyte "
   }
 ]
